@@ -39,6 +39,7 @@ vim deployment-capivara.yaml
 
 Arquivo: deployment-capivara.yaml
 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -59,7 +60,8 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
-        - 
+```
+        
 salve o arquivo dando esc :wq 
 
 4. (Opcional) Crie um Service para Expor a Aplicação
@@ -71,6 +73,7 @@ vim service-capivara.yaml
 
 Arquivo: service-capivara.yaml
 
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -84,6 +87,8 @@ spec:
       port: 80
       targetPort: 80
   type: NodePort
+```
+
  salve o arquivo e saia dando um esc :wq 
 
 5. Aplique os Arquivos YAML
@@ -124,6 +129,7 @@ Execute o comando vim teste-pod.yaml para criar o arquivo abaixo:
 
 Arquivo: teste-pod.yaml
 
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -135,6 +141,7 @@ spec:
     image: nginx:latest
     ports:
     - containerPort: 80
+```
 
 
 Passo para Criar o Pod
